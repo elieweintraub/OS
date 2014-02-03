@@ -1,0 +1,4 @@
+execve("/afs/ee.cooper.edu/user/w/e/weintr/bin/hello1", ["hello1"], [/* 70 vars */]) = 0
+write(1, "Hello, world!\n", 14)         = 14
+--- SIGSEGV {si_signo=SIGSEGV, si_code=SEGV_MAPERR, si_addr=0xe} ---
++++ killed by SIGSEGV (core dumped) +++

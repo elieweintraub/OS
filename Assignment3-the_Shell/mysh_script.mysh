@@ -1,0 +1,3 @@
+#! /afs/ee.cooper.edu/user/w/e/weintr/bin/mysh
+echo I'm using my shell!
+ls 

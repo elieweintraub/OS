@@ -1,0 +1,4 @@
+execve("/afs/ee.cooper.edu/user/w/e/weintr/bin/hello2", ["hello2"], [/* 70 vars */]) = 0
+write(1, "Hello, world!\n", 14)         = 14
+_exit(100)                              = ?
++++ exited with 100 +++

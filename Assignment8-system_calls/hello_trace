@@ -1,0 +1,55 @@
+execve("./hello", ["./hello"], [/* 70 vars */]) = 0
+brk(0)                                  = 0x14db000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f12d9bbb000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/usr/local/lib64/tls/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib64/tls/x86_64", 0x7fff686b0560) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib64/tls/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib64/tls", 0x7fff686b0560) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib64/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib64/x86_64", 0x7fff686b0560) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib64", {st_mode=S_IFDIR|0777, st_size=4096, ...}) = 0
+open("/usr/local/lib/tls/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib/tls/x86_64", 0x7fff686b0560) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/tls/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib/tls", 0x7fff686b0560) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib/x86_64", 0x7fff686b0560) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+open("tls/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("tls/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("libc.so.6", O_RDONLY|O_CLOEXEC)   = -1 ENOENT (No such file or directory)
+open("/opt/opencascade/lib/tls/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/opt/opencascade/lib/tls/x86_64", 0x7fff686b0560) = -1 ENOENT (No such file or directory)
+open("/opt/opencascade/lib/tls/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/opt/opencascade/lib/tls", 0x7fff686b0560) = -1 ENOENT (No such file or directory)
+open("/opt/opencascade/lib/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/opt/opencascade/lib/x86_64", 0x7fff686b0560) = -1 ENOENT (No such file or directory)
+open("/opt/opencascade/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/opt/opencascade/lib", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=330965, ...}) = 0
+mmap(NULL, 330965, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f12d9b6a000
+close(3)                                = 0
+open("/usr/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0 \33\2\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=2035252, ...}) = 0
+mmap(NULL, 3852848, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f12d95ee000
+mprotect(0x7f12d9791000, 2097152, PROT_NONE) = 0
+mmap(0x7f12d9991000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a3000) = 0x7f12d9991000
+mmap(0x7f12d9997000, 14896, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f12d9997000
+close(3)                                = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f12d9b69000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f12d9b68000
+arch_prctl(ARCH_SET_FS, 0x7f12d9b69700) = 0
+mprotect(0x7f12d9991000, 16384, PROT_READ) = 0
+mprotect(0x7f12d9bbc000, 4096, PROT_READ) = 0
+munmap(0x7f12d9b6a000, 330965)          = 0
+fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 10), ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f12d9bba000
+write(1, "Hello World!\n", 13)          = 13
+exit_group(0)                           = ?
++++ exited with 0 +++

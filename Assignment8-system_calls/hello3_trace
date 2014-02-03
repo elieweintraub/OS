@@ -1,0 +1,4 @@
+execve("/afs/ee.cooper.edu/user/w/e/weintr/bin/hello3", ["hello3"], [/* 70 vars */]) = 0
+syscall_4294967295(0x1, 0x80490dc, 0xe, 0, 0, 0) = -1 (errno 38)
+_exit(100)                              = ?
++++ exited with 100 +++

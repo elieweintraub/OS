@@ -1,0 +1,54 @@
+//ECE 357 PS 8
+//Elie Weintraub
+
+//Output and Comments 
+
+[weintr@ice05 Assignment8-system_calls]$ strace -o hello1_trace hello1
+Hello, world!
+Segmentation fault (core dumped)
+
+//hello1_trace: (no exit system call results in a SIGSEGV after the write)
+
+	execve("/afs/ee.cooper.edu/user/w/e/weintr/bin/hello1", ["hello1"], [/* 70 vars */]) = 0
+	write(1, "Hello, world!\n", 14)         = 14
+	--- SIGSEGV {si_signo=SIGSEGV, si_code=SEGV_MAPERR, si_addr=0xe} ---
+	+++ killed by SIGSEGV (core dumped) +++
+// A SIGSEGV is delivered when no exit system call is included because the code runs off the end
+// of the .data section resulting in a SIGSEGV
+
+[weintr@ice05 Assignment8-system_calls]$ strace -o hello2_trace hello2
+Hello, world!
+[weintr@ice05 Assignment8-system_calls]$ echo $?
+100
+
+//hello2_trace: (includes exit system call after the write)
+
+	execve("/afs/ee.cooper.edu/user/w/e/weintr/bin/hello2", ["hello2"], [/* 70 vars */]) = 0
+	write(1, "Hello, world!\n", 14)         = 14
+	_exit(100)                              = ?
+	+++ exited with 100 +++
+
+[weintr@ice05 Assignment8-system_calls]$ strace -o hello3_trace hello3
+
+//hello3_trace: (invalid system call number)
+
+	execve("/afs/ee.cooper.edu/user/w/e/weintr/bin/hello3", ["hello3"], [/* 70 vars */]) = 0
+	syscall_4294967295(0x1, 0x80490dc, 0xe, 0, 0, 0) = -1 (errno 38)
+	_exit(100)                              = ?
+	+++ exited with 100 +++
+
+[weintr@ice05 Assignment8-system_calls]$ strace -o hello4_trace hello4
+
+//hello4_trace: (invalid address for the write string)
+
+	execve("/afs/ee.cooper.edu/user/w/e/weintr/bin/hello4", ["hello4"], [/* 70 vars */]) = 0
+	write(1, 0xffffffff, 14)                = -1 EFAULT (Bad address)
+	_exit(100)                              = ?
+	+++ exited with 100 +++
+
+[weintr@ice05 Assignment8-system_calls]$ sys_call_test                     
+Cost of empty loop iteration: 2.253372 ns
+Cost of empty function call: 0.034152 ns
+Cost of simple system call: 43.696365 ns
+A simple system call is 1279.483892 times more expensive than an empty function call
+

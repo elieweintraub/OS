@@ -1,0 +1,4 @@
+execve("/afs/ee.cooper.edu/user/w/e/weintr/bin/hello4", ["hello4"], [/* 70 vars */]) = 0
+write(1, 0xffffffff, 14)                = -1 EFAULT (Bad address)
+_exit(100)                              = ?
++++ exited with 100 +++
